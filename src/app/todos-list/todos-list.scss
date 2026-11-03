@@ -1,0 +1,58 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todos-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 640px;
+    padding: 32px 16px;
+}
+
+h2 {
+    margin: 0 0 8px;
+    font: var(--mat-sys-headline-small);
+}
+
+.todos-input {
+    width: 100%;
+}
+
+.todos-filter {
+    align-self: center;
+}
+
+.todo-option {
+    border-bottom: 1px solid var(--mat-sys-outline-variant);
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &[aria-selected='true'] .todo-title {
+        color: var(--mat-sys-on-surface-variant);
+        text-decoration: line-through;
+    }
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.todo-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.todo-delete {
+    flex-shrink: 0;
+    color: var(--mat-sys-on-surface-variant);
+}
